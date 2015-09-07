@@ -43,7 +43,7 @@
         $stateProvider.state('user.edit', {
             url: '/edit:userId',
             templateUrl: './app/user/edit/edit.html',
-            controller: 'EditController',
+            controller: 'UserController',
             controllerAs: 'vm'
         });
     }
