@@ -1,0 +1,57 @@
+<div layout="row" class="users">
+    <span flex-gt-md></span>
+    <md-card layout="column" flex flex-gt-md="50" layout-margin layout-padding layout-align="center center">
+        <div layout="row" layout-align="start start" layout-fill>
+            <md-button class="back-btn" ng-if="!vm.edit" class="md-icon-button" aria-label="Settings" ng-click="vm.backBtnClick()">
+                <md-icon md-svg-icon="images/ic_arrow_back_black_24px.svg" aria-label="menu"></md-icon>
+            </md-button>
+            <md-button class="close-btn" ng-if="vm.edit" class="md-icon-button" aria-label="Settings" ng-click="vm.closeBtnClick(vm.user.id)">
+                <md-icon md-svg-icon="images/ic_close_black_24px.svg" aria-label="menu"></md-icon>
+            </md-button>
+        </div>
+        <div style="width:40%;margin-top: -40px;">
+            <img src="./images/avatar.svg" style="border-radius:50%;">
+        </div>
+        <md-content layout="column" layout-fill>
+            <div layout="column" layout-margin layout-align="center center" layout-align-sm="center start">
+                <h3>{{vm.user.name}}</h3>
+                <h4>{{vm.user.company.name}}</h4>
+            </div>
+            <md-divider></md-divider>
+            <span style="margin-top: 50px;">
+                <md-button ng-if="!vm.edit" ng-click="vm.onEditBtnClick(vm.user.id)" style="margin-right: -10px;" class="md-fab md-primary md-fab-bottom-right" aria-label="Use Android">
+                    <md-icon md-svg-src="images/ic_edit_white_24px.svg"></md-icon>
+                </md-button>
+                <md-button ng-if="vm.edit" ng-click="vm.onSaveBtnClick(vm.user)" style="margin-right: -10px;" class="md-fab md-primary md-fab-bottom-right" aria-label="Use Android">
+                    <md-icon md-svg-src="images/ic_check_white_24px.svg"></md-icon>
+                </md-button>
+            </span>
+        </md-content>
+
+        <md-content class="user-profile" layout-padding ng-if="!vm.edit" layout="column" layout-fill layout-align="center start">
+
+            <div flex layout="row">
+                <md-icon md-svg-src="images/ic_account_circle_black_24px.svg" ></md-icon>
+                <p style="margin-left:10px;">{{vm.user.username}}</p>
+            </div>
+            <div flex layout="row">
+                <md-icon md-svg-src="images/ic_email_black_24px.svg" ></md-icon>
+                <p style="margin-left:10px;">{{vm.user.email}}</p>
+            </div>
+            <div flex layout="row">
+                <md-icon md-svg-src="images/ic_contact_phone_black_24px.svg" ></md-icon>
+                <p style="margin-left:10px;">{{vm.user.phone}}</p>
+            </div>
+            <div flex layout="row">
+                <md-icon md-svg-src="images/ic_web_black_24px.svg" ></md-icon>
+                <p style="margin-left:10px;">{{vm.user.website}}</p>
+            </div>
+
+        </md-content>
+
+        <md-content class="edit-profile" layout-padding layout-margin ng-if="vm.edit" ui-view layout="column" layout-fill layout-align="center start">
+
+        </md-content>
+    </md-card>
+    <span flex-gt-md></span>
+</div>

@@ -1,0 +1,52 @@
+.user-avatar {
+    border-radius: 99%;
+}
+
+.edit-user-fab{
+    position: absolute;
+    top: 54%;
+    left: 80%;
+}
+
+.dashboard.ng-enter {
+    animation: 1s slideInUp;
+}
+.dashboard.ng-leave {
+    animation: 0.5s slideInDown;
+}
+
+.search-tool-bar.ng-enter {
+    animation: 1s fadeIn;
+}
+
+.search-tool-bar.ng-leave {
+    animation: 0.5s fadeOut;
+}
+
+.main-tool-bar.ng-enter {
+    animation: 1s fadeIn;
+}
+
+.back-btn{
+    min-width: 0px;
+}
+
+.close-btn{
+    min-width: 0px;
+}
+
+.back-btn.ng-enter {
+    animation: 1s fadeIn;
+}
+
+.close-btn.ng-enter {
+    animation: 1s fadeIn;
+}
+
+.user-profile.ng-enter {
+    animation: 1s fadeIn;
+}
+
+.edit-profile.ng-enter {
+    animation: 1s fadeIn;
+}

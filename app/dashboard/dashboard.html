@@ -1,0 +1,43 @@
+<md-toolbar ng-if="!vm.showSearch" class="main-tool-bar">
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Contacts</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="Search" ng-click="vm.onSearchClick()">
+            <md-icon md-svg-icon="images/ic_search_white_24px.svg"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+            <md-icon md-svg-icon="images/ic_more_vert_white_24px.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-toolbar class="md-hue-1" ng-if="vm.showSearch" class="search-tool-bar">
+    <div class="md-toolbar-tools">
+        <md-button ng-click="vm.showSearch = !vm.showSearch; vm.searchText='';" aria-label="Back">
+            <md-icon md-svg-icon="images/ic_arrow_back_black_24px.svg" aria-label="menu"></md-icon>
+        </md-button>
+        <md-input-container flex>
+            <label>&nbsp;</label>
+            <input ng-model="vm.searchText" placeholder="enter search">
+        </md-input-container>
+    </div>
+</md-toolbar>
+<md-card>
+    <md-card-content layout-padding>
+        <md-list>
+            <md-list-item class="md-3-line" ng-repeat="user in vm.users | filter:vm.searchText"
+                          ng-click="vm.onUserClick(user.id)" >
+                <div class="md-tile-left inset">
+                    <user-avatar></user-avatar>
+                </div>
+                <div class="md-list-item-text">
+                    <h3>{{ user.username }}</h3>
+                    <h4>{{ user.name }}</h4>
+                    <p>{{ user.email }}</p>
+                </div>
+                <md-divider ></md-divider>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+</md-card>
