@@ -50,3 +50,22 @@
 .edit-profile.ng-enter {
     animation: 1s fadeIn;
 }
+
+.theme-back-btn{
+    min-width: 0px;
+}
+.theme-back-btn svg {
+    fill: #ffffff;
+}
+
+.base-theme-icon svg {
+    fill: #000000;
+}
+
+.primary-color-icon svg {
+    fill: indigo;
+}
+
+.accent-color-icon svg {
+    fill: pink;
+}

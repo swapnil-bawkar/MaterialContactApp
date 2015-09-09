@@ -1,0 +1,38 @@
+<md-sidenav md-theme class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+    <md-toolbar class="md-theme-indigo" layout="row" layout-align="space-around center">
+        <md-button class="theme-back-btn" class="md-icon-button" aria-label="Settings"
+                   ng-click="vm.toggleRight()">
+            <md-icon md-svg-icon="images/ic_arrow_back_black_24px.svg" aria-label="menu"></md-icon>
+        </md-button>
+        <h1 class="md-toolbar-tools">Theming</h1>
+    </md-toolbar>
+    <md-content layout-padding>
+        <md-list>
+            <md-list-item class="md-3-line" ng-click="vm.baseThemeClick()" >
+                <div class="md-list-item-text" layout="column">
+                    <h3>Base Theme</h3>
+                    <h4>Theme Name</h4>
+                </div>
+                <md-icon class="base-theme-icon" md-svg-icon="images/ic_lens_black_24px.svg" aria-label="menu"></md-icon>
+                <md-divider ></md-divider>
+            </md-list-item>
+            <md-list-item class="md-3-line" ng-click="vm.onUserClick(user.id)" >
+                <div class="md-list-item-text" layout="column">
+                    <h3>Primary Color</h3>
+                    <h4>Apply a primary theme color</h4>
+                </div>
+                <md-icon class="primary-color-icon" md-svg-icon="images/ic_lens_black_24px.svg" aria-label="menu"></md-icon>
+                <md-divider ></md-divider>
+            </md-list-item>
+            <md-list-item class="md-3-line" ng-click="vm.onUserClick(user.id)" >
+                <div class="md-list-item-text" layout="column">
+                    <h3>Accent Color</h3>
+                    <h4>Apply a accent theme color</h4>
+                </div>
+                <md-icon class="accent-color-icon" md-svg-icon="images/ic_lens_black_24px.svg" aria-label="menu"></md-icon>
+
+            </md-list-item>
+            <md-divider ></md-divider>
+        </md-list>
+    </md-content>
+</md-sidenav>

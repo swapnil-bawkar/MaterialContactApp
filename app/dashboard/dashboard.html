@@ -7,9 +7,22 @@
         <md-button class="md-icon-button" aria-label="Search" ng-click="vm.onSearchClick()">
             <md-icon md-svg-icon="images/ic_search_white_24px.svg"></md-icon>
         </md-button>
-        <md-button class="md-icon-button" aria-label="More">
-            <md-icon md-svg-icon="images/ic_more_vert_white_24px.svg"></md-icon>
-        </md-button>
+        <md-menu md-position-mode="target-right target" >
+            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                <md-icon md-menu-origin md-svg-icon="images/ic_more_vert_white_24px.svg"></md-icon>
+            </md-button>
+            <md-menu-content width="4" >
+                <md-menu-item>
+                    <md-button ng-click="vm.toggleRight()">
+                        <div layout="row" layout-align="space-around center" layout-fill>
+                            <p>Theming</p>
+                            <span flex></span>
+                            <md-icon md-menu-align-target md-svg-icon="images/ic_settings_white_24px.svg"></md-icon>
+                        </div>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
     </div>
 </md-toolbar>
 <md-toolbar class="md-hue-1" ng-if="vm.showSearch" class="search-tool-bar">
