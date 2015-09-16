@@ -1,0 +1,118 @@
+.user-avatar {
+  border-radius: 99%;
+}
+
+.edit-user-fab{
+  position: absolute;
+  top: 54%;
+  left: 80%;
+
+}
+
+.dashboard {
+  &.ng-enter {
+    animation: 1s fadeIn;
+    img {
+      animation: 2s zoomIn;
+    }
+    .user-avatar{
+      animation: 2s zoomIn;
+    }
+    .md-fab{
+      animation: 2s zoomIn;
+    }
+  }
+  &.ng-leave {
+    animation: 0.5s fadeOut;
+  }
+}
+
+  .search-tool-bar.ng-enter {
+    animation: 1s fadeIn;
+  }
+
+  .search-tool-bar.ng-leave {
+    animation: 0.5s fadeOut;
+  }
+
+  .main-tool-bar.ng-enter {
+    animation: 1s fadeIn;
+  }
+
+  .back-btn{
+    min-width: 0px;
+  }
+
+  .close-btn{
+    min-width: 0px;
+  }
+
+  .back-btn.ng-enter {
+    animation: 1s fadeIn;
+  }
+
+  .close-btn.ng-enter {
+    animation: 1s fadeIn;
+  }
+
+  .user-profile.ng-enter {
+    animation: 1s fadeIn;
+  }
+
+  .edit-profile {
+    &.ng-enter {
+      animation: fadeIn 2s linear;
+    }
+  }
+.user-profile {
+  &.ng-enter {
+    animation: fadeIn 2s linear;
+  }
+}
+
+  @keyframes square-to-circle {
+    0%  {
+      border-radius:95% 0 95% 95%;
+      height: 10px;
+      width: 10%;
+    }
+    25%  {
+      border-radius:75% 0 75% 75%;
+      height: 50px;
+      width: 25%;
+    }
+    50%  {
+      border-radius:50% 0 50% 50%;
+      height: 100px;
+      width: 50%;
+    }
+    75%  {
+      border-radius:25% 0 25% 25%;
+      height: 150px;
+      width: 75%;
+    }
+    100% {
+      border-radius:0;
+      height: 200px;
+      width: 100%;
+    }
+  }
+
+  .theme-back-btn{
+    min-width: 0px;
+  }
+  .theme-back-btn svg {
+    fill: #ffffff;
+  }
+
+  .base-theme-icon svg {
+    fill: #000000;
+  }
+
+  .primary-color-icon svg {
+    fill: indigo;
+  }
+
+  .accent-color-icon svg {
+    fill: pink;
+  }

@@ -30,7 +30,7 @@
 
         <md-content class="user-profile" layout-padding ng-if="!vm.edit" layout="column" layout-fill layout-align="center start">
 
-            <div flex layout="row">
+            <div flex layout="row" >
                 <md-icon md-svg-src="images/ic_account_circle_black_24px.svg" ></md-icon>
                 <p style="margin-left:10px;">{{vm.user.username}}</p>
             </div>
@@ -49,9 +49,11 @@
 
         </md-content>
 
-        <md-content class="edit-profile" layout-padding layout-margin ng-if="vm.edit" ui-view layout="column" layout-fill layout-align="center start">
 
-        </md-content>
+            <md-content class="edit-profile" layout-fill layout-padding layout-margin ng-if="vm.edit" ui-view layout="column" llayout-align="center start">
+
+            </md-content>
+
     </md-card>
     <span flex-gt-md></span>
 </div>
